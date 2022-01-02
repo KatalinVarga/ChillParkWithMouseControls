@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <title>aFrame Starter Template - DAT515</title>
+    <title>aFrame Starter Template - DAT515</title>
+</head>
+
+<body>
+    
+    <a-assets>
+      // assets are categorised by type and in alphabetical order within types  
+        
+     // 3D models:
+        // bear - free 3Dmodel provided by user'Younggeon' at https://www.turbosquid.com/3d-models/timmy-tommy-model-1532983 - model was altered in 3DS Max
+        <a-asset-item id="teddyObj" src="assets/3DModels/Bears/teddy.obj" ></a-asset-item>
+        <a-asset-item id="teddyMtl" src="assets/3DModels/Bears/teddy.mtl" ></a-asset-item>
+
+        // bench - free 3D model by account user 'Mr Toews' at turbosquid.com. Available at: https://www.turbosquid.com/3d-models/bench-seat-model-1693546
+        <a-asset-item id="benchObj" src="assets/3DModels/Bench/bench.obj" ></a-asset-item>
+        <a-asset-item id="benchMtl" src="assets/3DModels/Bench/bench.mtl" ></a-asset-item>
+
+        // bird 1 - free 3D model by user 'Chantal246' at https://www.turbosquid.com/3d-models/free-obj-mode-bird-quad-triangles/1100939
+        <a-asset-item id="bird1Obj" src="assets/3DModels/Bird/bird1.obj" ></a-asset-item>
+        <a-asset-item id="bird1Mtl" src="assets/3DModels/Bird/bird1.mtl" ></a-asset-item>
+
+        // bush 1 - own model:
+        <a-asset-item id="bush1Obj" src="assets/3DModels/Bushes/bush1.obj" ></a-asset-item>
+        <a-asset-item id="bush1Mtl" src="assets/3DModels/Bushes/bush1.mtl" ></a-asset-item>
+
+        // bush 2 - own model:
+        <a-asset-item id="bush2Obj" src="assets/3DModels/Bushes/bush2.obj" ></a-asset-item>
+        <a-asset-item id="bush2Mtl" src="assets/3DModels/Bushes/bush2.mtl" ></a-asset-item>
+       
+        // butterflies - free 3D base model by 'Pairazaman' at https://www.turbosquid.com/3d-models/3d-model-of-cartoony-butterfly/406836
+        <a-asset-item id="butterflyObj" src="assets/3DModels/Butterfly/butterfly.obj" ></a-asset-item>
+        <a-asset-item id="butterflyMtl" src="assets/3DModels/Butterfly/butterfly.mtl" ></a-asset-item>
+
+        // duck - own model   
+        <a-asset-item id="duckObj" src="assets/3DModels/Duck/duck.obj" ></a-asset-item>
+        <a-asset-item id="duckMtl" src="assets/3DModels/Duck/duck.mtl" ></a-asset-item>
+
+        // flower  - free 3D model by bariacg at turbosquid.com. Available at: https://www.turbosquid.com/3d-models/chicky-mascot-model-1159210
+        <a-asset-item id="flower1Obj" src="assets/3DModels/VariousVegetation/bush_small.obj" ></a-asset-item>
+        <a-asset-item id="flower1Mtl" src="assets/3DModels/VariousVegetation/bush_small.mtl" ></a-asset-item>
+
+        // flute free 3D model from https://free3d.com/: 
+        <a-asset-item id="fluteObj" src="assets/3DModels/Flute/10381_Flute_v4_L3.obj" ></a-asset-item>
+        <a-asset-item id="fluteMtl" src="assets/3DModels/Flute/10381_Flute_v4_L3.mtl" ></a-asset-item>
+
+        // grass1:
+        free 3D model by bariacg at turbosquid.com. Available at: https://www.turbosquid.com/3d-models/chicky-mascot-model-1159210
+        <a-asset-item id="grass1Obj" src="assets/3DModels/VariousVegetation/grass_1.obj" ></a-asset-item>
+        <a-asset-item id="grass1Mtl" src="assets/3DModels/VariousVegetation/grass_1.mtl" ></a-asset-item>
+        // grass2:
+        free 3D model by bariacg at turbosquid.com. Available at: https://www.turbosquid.com/3d-models/chicky-mascot-model-1159210
+        <a-asset-item id="grass2Obj" src="assets/3DModels/VariousVegetation/grass_2.obj" ></a-asset-item>
+        <a-asset-item id="grass2Mtl" src="assets/3DModels/VariousVegetation/grass_2.mtl" ></a-asset-item>
+        // grass3:
+        free 3D model by bariacg at turbosquid.com. Available at: https://www.turbosquid.com/3d-models/chicky-mascot-model-1159210
+        <a-asset-item id="grass3Obj" src="assets/3DModels/VariousVegetation/grass_3.obj" ></a-asset-item>
+        <a-asset-item id="grass3Mtl" src="assets/3DModels/VariousVegetation/grass_3.mtl" ></a-asset-item>
+     
+        // lotus:
+        free 3D model by account user 'cgsd' at turbosquid.com. Available at: https://www.turbosquid.com/3d-models/free-max-model-flower/1116825
+       <a-asset-item id="lotusObj" src="assets/3DModels/Lotus/lotus.obj" ></a-asset-item>
+       <a-asset-item id="lotusMtl" src="assets/3DModels/Lotus/lotus.mtl" ></a-asset-item>
+
+        //mushroom scene (with tufts of grass and log):
+        free 3D model by Juno Huang at turbosquid.com. Available at: https://www.turbosquid.com/3d-models/3d-model-low-polymushroom-1340449
+        <a-asset-item id="mushroom1Obj" src="assets/3DModels/Mushroom/Mushroom.obj" ></a-asset-item>
+        <a-asset-item id="mushroom1Mtl" src="assets/3DModels/Mushroom/Mushroom.mtl" ></a-asset-item>
+
+        //penguin:free 3D model from https://www.cgtrader.com/items/994230/download-page:
+        <a-asset-item id="penguinObj" src="assets/3DModels/Penguin/uploads_files_2897826_ollie.obj" ></a-asset-item>
+        <a-asset-item id="penguinMtl" src="assets/3DModels/Penguin/uploads_files_2897826_ollie.mtl" ></a-asset-item>
+   
+        // pond- own model:
+        <a-asset-item id="pondObj" src="assets/3DModels/Pond/pond.obj" ></a-asset-item>
+        <a-asset-item id="pondMtl" src="assets/3DModels/Pond/pond.mtl" ></a-asset-item>
+
+        //rock with tree:
+        free 3D model by account user Barelylowpoly at turbosquid.com. Available at:https://www.turbosquid.com/3d-models/tree-rocks-3d-1540898
+        <a-asset-item id="rockTreeObj" src="assets/3DModels/RockWithTree/rockWithTree.obj" ></a-asset-item>
+        <a-asset-item id="rockTreeMtl" src="assets/3DModels/RockWithTree/rockWithTree.mtl" ></a-asset-item>
+
+        // rooster - free 3D model at https://rigmodels.com/model.php?view=HeiHei-3d-model__PPLNEPRLR1BO38LCTJ5P0FYYJ
+        <a-asset-item id="roosterObj" src="assets/3DModels/Rooster/PPLNEPRLR1BO38LCTJ5P0FYYJ.obj" ></a-asset-item>
+        <a-asset-item id="roosterMtl" src="assets/3DModels/Rooster/PPLNEPRLR1BO38LCTJ5P0FYYJ.mtl" ></a-asset-item>
+
+        //rubberduck/duckling - free 3D model by 'arenas-angelica' at https://www.cgtrader.com/free-3d-models/animals/bird/rubber-duck-ef3c1b3e-9421-4be4-9932-644f30b726ff
+        <a-asset-item id="rubberDuckObj" src="assets/3DModels/Rubberduck/uploads_files_2865107_Rubberduck.obj" ></a-asset-item>
+        <a-asset-item id="rubberDuckMtl" src="assets/3DModels/Rubberduck/uploads_files_2865107_Rubberduck.mtl" ></a-asset-item>
+
+        // tree1: 
+        base model -free 3D model by account user 'Mount 3D' at turbosquid.com. Available at: https://www.turbosquid.com/3d-models/tree-pixel-low-poly-3d-model-1764347  
+        <a-asset-item id="tree1Obj" src="assets/3DModels/Tree1/tree1.obj" ></a-asset-item>
+        <a-asset-item id="tree1Mtl" src="assets/3DModels/Tree1/tree1.mtl" ></a-asset-item>
+
+        // tree2: 
+        altered version of base model  by account user 'Mount 3D' at turbosquid.com. Available at: https://www.turbosquid.com/3d-models/tree-pixel-low-poly-3d-model-1764347   
+        <a-asset-item id="tree2Obj" src="assets/3DModels/Tree2/tree2.obj" ></a-asset-item>
+        <a-asset-item id="tree2Mtl" src="assets/3DModels/Tree2/tree2.mtl" ></a-asset-item>
+
+        //tree3:
+        altered version of base model  by Ada King at turbosquid.com. Available at: https://www.turbosquid.com/3d-models/blender-carrot-crystal-oak-tree-3d-model-1189852
+        <a-asset-item id="tree3Obj" src="assets/3DModels/Tree3/trees3.obj" ></a-asset-item>
+        <a-asset-item id="tree3Mtl" src="assets/3DModels/Tree3/trees3.mtl" ></a-asset-item> 
+   
+        // tree4: 
+        altered version of base model  by account user 'Mount 3D' at turbosquid.com. Available at: https://www.turbosquid.com/3d-models/tree-pixel-low-poly-3d-model-1764347  
+        <a-asset-item id="tree4Obj" src="assets/3DModels/Tree4/tree4.obj" ></a-asset-item>
+        <a-asset-item id="tree4Mtl" src="assets/3DModels/Tree4/tree4.mtl" ></a-asset-item>
+
+        // tree5: 
+        free 3Dmodel  by Juno Huang at turbosquid.com. Available at: https://www.turbosquid.com/3d-models/3d-polytreesplant-1340217 
+        <a-asset-item id="tree5Obj" src="assets/3DModels/Tree5/trees (1).obj" ></a-asset-item>
+        <a-asset-item id="tree5Mtl" src="assets/3DModels/Tree5/trees (1).mtl" ></a-asset-item>
+             
+        // trumpet free 3D model from https://free3d.com/: 
+        <a-asset-item id="trumpetObj" src="assets/3DModels/Trumpet/10395_Trumpet_v1.obj" ></a-asset-item>
+        <a-asset-item id="trumpetMtl" src="assets/3DModels/Trumpet/10395_Trumpet_v1.mtl" ></a-asset-item>
+        
+        // turtle - basic model by 'BehTab' at https://www.turbosquid.com/3d-models/turtle-basic-3d-1397922 (further edited in 3DS Max)
+        <a-asset-item id="turtleObj" src="assets/3DModels/Turtle/turtle.obj" ></a-asset-item>
+        <a-asset-item id="turtleMtl" src="assets/3DModels/Turtle/turtle.mtl" ></a-asset-item>
+
+        //sounds:
+
+        //Background sounds - by 'Antonio Lai', from https://freesound.org/people/Antonio_Lai/sounds/517859/
+        <a-sound id="bg" src="assets/audio/background.wav" preload="auto"></a-sound>
+        // Butterflies' chime - free sound by user 'ellenmentor' at https://freesound.org/people/ellenmentor/sounds/460255/
+        <a-sound id="butterfliesChime" src="assets/audio/butterfliesChime.wav" preload="auto"></a-sound>
+        //Duck sound - free sound provided by account user 'DrMaysta', from https://freesound.org/people/DrMaysta/sounds/418509/
+        <a-sound id="quack" src="assets/audio/quack.wav" preload="auto"></a-sound>
+        // Forest sound by 'Arnoud Contancier' at https://freesound.org/people/arnaud%20coutancier/sounds/467096/#comments
+        <a-sound id="forest1" src="assets/audio/forest.wav" preload="auto"></a-sound>
+        // Forest 2 sound by 'taavhaap' at https://freesound.org/people/taavhaap/sounds/528661/#comments
+        <a-sound id="forest2" src="assets/audio/forest2.wav" preload="auto"></a-sound>
+        // Forest 3 sound by 'gurek' at https://freesound.org/people/gurek/sounds/433000/
+        <a-sound id="forest3" src="assets/audio/forest3.wav" preload="auto"></a-sound>
+        // Fur Elise for the duck's scene- Music box version of the Fur Elise by Beethoven, from https://freesound.org/people/Jagadamba/sounds/387822/#comments:
+        <a-sound id="FurElise" src="assets/audio/FurElise.wav" preload="auto"></a-sound>
+        //Morning sound for the flute and trumpet- royalty-free classical music - Edvard Grieg's Peer Gynt, Op. 23, 'Morning Mood' song from the opera 'In the Hall of the Mountain King':
+        <a-sound id="morning" src="assets/audio/morningMood.mp3" preload="auto"></a-sound>
+        // Pair of birds- free sound provided by account user 'CarlosCAV' from  https://freesound.org/people/CarlosCAV/sounds/581313/
+        <a-sound id="jumpingBirds" src="assets/audio/jumpingbirds.wav" preload="auto"></a-sound>
+        // Penguin voice - created using voiceovermaker.io
+        <a-sound id="penguinVoice" src="assets/audio/penguinvoice.mp3" preload="auto"></a-sound>
+        //Penguin's water splashing sound by 'Bidone', from https://freesound.org/people/Bidone/sounds/66150/
+        <a-sound id="penguin" src="assets/audio/penguinInwater.wav" preload="auto"></a-sound>
+        // Rooster sound by user 'DrinkingWindGames' at https://freesound.org/people/DrinkingWindGames/sounds/572955/
+        <a-sound id="rooster" src="assets/audio/rooster.wav" preload="auto"></a-sound>
+        // Teddy's voice - created using voiceovermaker.io 
+        <a-sound id="teddyVoice" src="assets/audio/teddyTalks.wav" preload="auto"></a-sound>
+        // Turtle's voice - created using voiceovermaker.io (sound also edited by Adobe software altering pitch)
+        <a-sound id="turtleVoice" src="assets/audio/turtleVoice.mp3" preload="auto"></a-sound>
+        //Voice instruction - sound created using voiceovermaker.io:
+        <a-sound id="instruction" src="assets/audio/instruction.wav" preload="auto"></a-sound>
+
+    </a-assets>
+
+    <a-scene>
+         
+        <a-camera>
+        <a-cursor geometry="primitive: ring; radiusInner: 0.08; radiusOuter: 0.1"; material="color: #EE4266; shader: flat"></a-cursor>
+        </a-camera>
+
+        // instruction:
+        <a-sound  sound="src: #instruction; autoplay:true; loop: false; volume: 0.9;"   ></a-sound>
+        //background sounds:
+        <a-sound  sound="src: #bg; autoplay:true; loop: true; volume: 1; " ></a-sound>
+
+        <a-sky color="#C2F5FF"></a-sky>
+
+        // ground:
+        <a-plane color="#608A42";    position="0 1 0" rotation="-90 0 0" scale="100 100 1"></a-plane>
+   
+        // pond:
+        <a-entity obj-model="obj: #pondObj; mtl: #pondMtl" position="-0.92 0.703 -10.96" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+
+         // text instruction for duckling:            
+        <a-text id="ducklingInstruction" value="Pet the duckling!" align="center" color="#FFF" visible="false" position="-4.28 2.5 -6.671" rotation="0 20 0" geometry="primitive: plane; width: 1.75 height:1" material="color: #333" visible="false"></a-text> 
+        
+        // plants:
+
+        <a-entity obj-model="obj: #bush1Obj; mtl: #bush1Mtl" position="-7.633 1.036 -7.405" rotation="0 63.91 0" scale="0.1 0.1 0.1";
+        event-set__enter="_event: mouseenter; _target: #ducklingInstruction; visible: true"; event-set__leave="_event: mouseleave; _target: #ducklingInstruction; visible: false"></a-entity>
+        <a-entity obj-model="obj: #bush2Obj; mtl: #bush2Mtl" position="-4.634 1.036 -10.720" rotation="-1.275 66.832 0"  scale="0.1 0.1 0.1"></a-entity>
+
+        <a-entity obj-model="obj: #flower1Obj; mtl: #flower1Mtl" position="-4.535 1.211 -6.900" rotation="0 0 -15.09" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity obj-model="obj: #flower1Obj; mtl: #flower1Mtl" position="-3.030 1.3 -8.791" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity obj-model="obj: #flower1Obj; mtl: #flower1Mtl" position="-5.428 1.211 -6.740" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity obj-model="obj: #flower1Obj; mtl: #flower1Mtl" position="-4.473 1.639 -7.230" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity obj-model="obj: #flower1Obj; mtl: #flower1Mtl" position="-2.505 1.09 -8.988" rotation="0 0 -56.524" scale="0.1 0.1 0.1"></a-entity>
+
+        <a-entity obj-model="obj: #grass1Obj; mtl: #grass1Mtl"  position="-5.40 1.036 -5" rotation="-1.275 66.832 0"  scale="0.1 0.1 0.1"></a-entity>
+        <a-entity obj-model="obj: #grass1Obj; mtl: #grass1Mtl"  position="-4.60 1.036 -3.758" rotation="-1.275 66.832 0" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity obj-model="obj: #grass1Obj; mtl: #grass1Mtl"  position="-5.18 1.036 -5.5" rotation="-1.275 66.832 0" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity obj-model="obj: #grass1Obj; mtl: #grass1Mtl"  position="-5.18 1.036 -4.5" rotation="-1.275 66.832 0" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity obj-model="obj: #grass1Obj; mtl: #grass1Mtl"  position="-5.25 1.036 -4" rotation="-1.275 66.832 0" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity obj-model="obj: #grass1Obj; mtl: #grass1Mtl"  position="-6.2 1.036 -6" rotation="-1.275 66.832 0" scale="0.1 0.1 0.1"></a-entity>
+
+        <a-entity obj-model="obj: #grass2Obj; mtl: #grass2Mtl"  position="-4.50 1.036 -3.758" rotation="-1.275 66.832 0" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity obj-model="obj: #grass2Obj; mtl: #grass2Mtl"  position="-5.58 1.036 -5.5" rotation="-1.275 66.832 0" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity obj-model="obj: #grass2Obj; mtl: #grass2Mtl"  position="-5.58 1.036 -4.5" rotation="-1.275 66.832 0" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity obj-model="obj: #grass2Obj; mtl: #grass2Mtl"  position="-5.2 1.036 -4" rotation="-1.275 66.832 0" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity obj-model="obj: #grass2Obj; mtl: #grass2Mtl"  position="-5 1.036 -5" rotation="-1.275 66.832 0" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity obj-model="obj: #grass2Obj; mtl: #grass2Mtl"  position="-6 1.270 -6" rotation="-1.275 66.832 0" scale="0.1 0.1 0.1"></a-entity>
+        
+        <a-entity obj-model="obj: #lotusObj; mtl: #lotusMtl"  position="-3 1.094 -6" rotation="0 0 0" scale="0.1 0.1 0.1"  animation="startEvents: mouseenter; property: rotation; to: 0 360 0; loop: true; dur: 3000"></a-entity>
+        <a-entity obj-model="obj: #lotusObj; mtl: #lotusMtl"  position="-3 1.094 -4.985" rotation="0 0 0" scale="0.1 0.1 0.1" animation="startEvents: mouseenter; property: rotation; to: 0 360 0; loop: true; dur: 3000"></a-entity>
+        <a-entity obj-model="obj: #lotusObj; mtl: #lotusMtl"  position="-3.728 1.036 -4.711" rotation="0 0 0" scale="0.1 0.1 0.1" animation="startEvents: mouseenter; property: rotation; to: 0 360 0; loop: true; dur: 3000"></a-entity>
+
+        <a-entity obj-model="obj: #mushroom1Obj; mtl: #mushroom1Mtl"  position="11.22 1.003 -15.34" rotation="0 0 0" scale="0.4 0.4 0.4"></a-entity>
+        <a-entity obj-model="obj: #mushroom1Obj; mtl: #mushroom1Mtl"  position="41.22 1.003 -15.34" rotation="0 0 0" scale="0.4 0.4 0.4"></a-entity>
+        <a-entity obj-model="obj: #mushroom1Obj; mtl: #mushroom1Mtl"  position="-41.22 1.003 -15.34" rotation="0 0 0" scale="0.4 0.4 0.4"></a-entity>
+        <a-entity obj-model="obj: #mushroom1Obj; mtl: #mushroom1Mtl"  position="11.22 1.003 15.34" rotation="0 -120 0" scale="0.4 0.4 0.4"></a-entity>
+
+        <a-entity obj-model="obj: #rockTreeObj; mtl: #rockTreeMtl" position="-31.571 1.602 -4.362" rotation="0 70 0"  scale="1 1 1"></a-entity>
+
+        <a-entity obj-model="obj: #tree1Obj; mtl: #tree1Mtl" position="-14.5 0 -35.74" rotation="0 -126 0"  scale="0.9 0.9 0.9"> ></a-entity>
+        <a-entity obj-model="obj: #tree1Obj; mtl: #tree1Mtl" position="19 0 -21" rotation="0 -270 0" scale="1 1 1"></a-entity>
+      
+        <a-entity obj-model="obj: #tree2Obj; mtl: #tree2Mtl" position="4.866 0.966 -38.498" rotation="0 0 0" scale="1 1 1"></a-entity>
+        <a-entity obj-model="obj: #tree2Obj; mtl: #tree2Mtl" position="4.866 0.966 36.91" rotation="0 -180 0" scale="1 1 1"></a-entity>
+        <a-entity obj-model="obj: #tree2Obj; mtl: #tree2Mtl" position="-35 0.966 15" rotation="0 120 0" scale="1 1 1"></a-entity>
+
+        <a-entity obj-model="obj: #tree3Obj; mtl: #tree3Mtl" position="27 0.815 13" rotation="0 -180 0" scale="1.5 1.5 1.5" sound="src: #forest1; autoplay: true; loop: true; volume:10" ></a-entity>
+        <a-entity obj-model="obj: #tree3Obj; mtl: #tree3Mtl" position="-25 0.815 32" rotation="0 90  0" scale="1.5 1.5 1.5"></a-entity>
+        <a-entity obj-model="obj: #tree3Obj; mtl: #tree3Mtl" position="27 0.815 13" rotation="0 120 0" scale="1.5 1.5 1.5"></a-entity>
+
+        <a-entity obj-model="obj: #tree4Obj; mtl: #tree4Mtl" position="-20 -2 -35.74" rotation="0 -270 0" scale="1 1 1" ></a-entity>
+        <a-entity obj-model="obj: #tree4Obj; mtl: #tree4Mtl" position="-26 -2 -36.74" rotation="0 -270 0" scale="1 1 1" ></a-entity>
+        <a-entity obj-model="obj: #tree4Obj; mtl: #tree4Mtl" position="-30 -2 -30.74" rotation="0 -180 0" scale="1 1 1" ></a-entity>
+
+        <a-entity obj-model="obj: #tree5Obj; mtl: #tree5Mtl" position="-8.2 0.906 46" rotation="0 -180 0" scale="2 2 2" ></a-entity>
+        <a-entity obj-model="obj: #tree5Obj; mtl: #tree5Mtl" position="12 0.906 46" rotation="0 -180 0" scale="2 2 2"></a-entity>
+        <a-entity obj-model="obj: #tree5Obj; mtl: #tree5Mtl" position="38 0.906 38" rotation="0 -120 0" scale="2 2 2" ></a-entity>
+        <a-entity obj-model="obj: #tree5Obj; mtl: #tree5Mtl" position="-41 0.906 21" rotation="0 -120 0" scale="2 2 2" ></a-entity>
+        <a-entity obj-model="obj: #tree5Obj; mtl: #tree5Mtl" position="-40.6 0.906 -26.34" rotation="0 -120 0" scale="2 2 2" sound="src: #forest2; autoplay: true; volume:3"></a-entity>
+        <a-entity obj-model="obj: #tree5Obj; mtl: #tree5Mtl" position="-37.6 0.906 -40.11" rotation="0 -138 0" scale="2 2 2" ></a-entity>
+        <a-entity obj-model="obj: #tree5Obj; mtl: #tree5Mtl" position="37.470 0.906 -22.44" rotation="0 90 0" scale="2 2 2" ></a-entity>
+        <a-entity obj-model="obj: #tree5Obj; mtl: #tree5Mtl" position="33.41 0.906 -39.310" rotation="0 -201.860 0" scale="2 2 2" sound="src: #forest3; autoplay: true; loop: true; volume:3"></a-entity>
+        <a-entity obj-model="obj: #tree5Obj; mtl: #tree5Mtl" position="30.02 0.906 -25.28" rotation="0 120 0" scale="2 2 2"></a-entity>
+     
+        // inanimate objects:
+        
+        <a-entity obj-model="obj: #benchObj; mtl: #benchMtl" position="25.712 0.48 -16.80" rotation="0 -150 0" scale="0.04 0.04 0.04"></a-entity>
+        <a-entity obj-model="obj: #benchObj; mtl: #benchMtl" position="3.744 0.48 25.48" rotation="0 120 0" scale="0.04 0.04 0.04"></a-entity>
+        <a-entity obj-model="obj: #benchObj; mtl: #benchMtl" position="-32.970 0.48 -19.50" rotation="0 -314.300 0" scale="0.04 0.04 0.04"></a-entity>
+
+        <!-- solution for coding multiple animations for the same entity was found at https://stackoverflow.com/questions/38515770/multiple-aframe-animations -->
+        <a-entity  obj-model="obj: #fluteObj; mtl: #fluteMtl" position="25.712 2.883 -16.80" rotation="-180 120 0" scale="0.07 0.07 0.07"
+            animation='startEvents: mouseenter;   property: position; dur: 500;  to: 25.712 7 -16.80; dir: normal; easing: linear; loop: false;'
+            animation__2='startEvents: mouseenter; property: rotation; dur: 3000; to: -180 120 360; dir: alternate; loop: true;'
+            sound__animationstart="src: #morning; on: mouseenter; poolSize: 3;loop: false; volume:10">
+        </a-entity>
+
+        <a-entity  obj-model="obj: #trumpetObj; mtl: #trumpetMtl" position="26.774 2.340 -12.911" rotation="0 0 180"  scale="0.1 0.1 0.1"
+            animation='startEvents: mouseenter; property: position; dur: 400;  to: 26.774 6 -12.911; dir: normal; loop: false;'
+            animation__2='startEvents: mouseenter; property: position; dur: 500; from:26.774 6 -12.911;  to:26.774 8 -12.911; dir: alternate; loop: true;'
+            animation__3='startEvents: mouseenter; property: rotation; to: -180 360 85; loop: true; dur: 3000;'>
+        </a-entity>
+
+        // animals:
+
+            // bear cub:
+        <a-entity obj-model="obj: #teddyObj; mtl: #teddyMtl" position="32  2.428 2.118" rotation="-88.768 92.293 -166.830"  scale="0.1  0.1 0.1" 
+        animation=" property: rotation; from: -88.768 92.293 -166.830; to:-78.341 89.115 -173.100; dir:alternate; dur: 1500; loop: true;"
+        animation__2=" property: object3D.position.y; from: 2.428; to:2.6; dir:alternate;  dur: 400; loop: true;"
+        sound__animationstarts="src: #teddyVoice; on: click; volume:3"></a-entity>
+
+            // butterflies:
+            <!-- animation refuses to alternate -->
+        <a-entity obj-model="obj: #butterflyObj; mtl: #butterflyMtl" position="10 2 13" rotation="0 -180 0" scale="0.003 0.003 0.003" 
+        animation=" property: object3D.position.x; to:-23 dir:alternate; dur: 14000; loop: true;";
+        animation__2=" property: object3D.position.y; to:5 dir:alternate; dur: 14000; loop: true;";
+        animation__3=" property: rotation; to: 0 -520 0; dur: 1000; loop: true;";
+        sound__animationstart="src: #butterfliesChime; on: mouseenter; volume: 8" ></a-entity> 
+
+            //duck (mother):
+        <a-entity obj-model="obj: #duckObj; mtl: #duckMtl" position="-7.83 1.2 -8.371" rotation="0 -120 0" scale="0.5 0.5 0.5" animation="startEvents: mouseenter; property: object3D.position.z;
+        to: -6;  dir: alternate;  dur: 5000;  loop:true ;" sound__mouseenter="src: url(assets/audio/quack.wav); on: click; poolSize: 3"></a-entity> 
+
+            //duckling:
+        <a-entity obj-model="obj: #rubberDuckObj; mtl: #rubberDuckMtl" position="-4.28 1.679 -6.671" rotation="0 -25.046 0" scale="0.005 0.005 0.005"
+        animation="startEvents: mouseenter; property: rotation; from: 0 -25.046 0; to: 0 0 0;  dir: alternate; dur: 2000; loop:true ;" 
+        sound__animationstart="src: #FurElise; on: click; poolSize: 3"></a-entity> 
+
+            // pair of birds:
+        <a-entity obj-model="obj: #bird1Obj; mtl: #bird1Mtl" position="5.5 3.916 26.5" rotation="0 -150 0" scale="0.1 0.1 0.1"
+        sound="src: url(assets/audio/jumpingbirds.wav); on: mouseleave; volume:50"
+        animation=" property: object3D.position.y; to:4.3 dir:alternate;  dur: 700; loop: true;"></a-entity> 
+
+            //penguin:
+        <a-entity obj-model="obj: #penguinObj; mtl: #penguinMtl" position="-28.197 2.495 -4.591" rotation="0 90 0" scale="0.008 0.008 0.008" 
+        animation='startEvents: mouseenter; property: position; dur: 500; from: -28.197 2.495 -4.591; to: -28.197 3 -4.591; dir: alternate; easing: linear; loop: true;'
+        sound__mouseenter="src: #penguin; on: mouseenter; volume:7"
+        sound__animationstarts="src: #penguinVoice; on: click; volume:3"></a-entity>
+
+            //rooster:
+        <a-entity obj-model="obj: #roosterObj; mtl: #roosterMtl" position="40.000 2.247 -17.300" rotation="0 -120 0" scale="1 1 1" 
+        animation='property: rotation; to: 0 -115 0; dur: 500; dir: alternate; loop:true'
+        sound__mouseenter="src: #rooster; on: click;volume:5"></a-entity>
+
+            // turtle:
+        <a-entity obj-model="obj: #turtleObj; mtl: #turtleMtl" position="-32.501 1.103 -18.975" rotation="0 44.721 0"  scale="0.01 0.01 0.01"
+        animation='startEvents: mouseenter; property: position; dur: 30000; to: -21 1.103 -28; dir: alternate;loop:true'
+        animation__2='startEvents: mouseenter; property: rotation; from:0 44.721 0 to: 11.256 45 11.081; dur: 700; dir: alternate; loop:true'
+        sound__mouseenter="src: #turtleVoice; on: click;volume:5"></a-entity>
+    
+    </a-scene>
+    
+</body>
+
+</html>
