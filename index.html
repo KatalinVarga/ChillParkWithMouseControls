@@ -146,7 +146,7 @@
         <a-sound id="forest2" src="assets/audio/forest2.wav" preload="auto"></a-sound>
         // Forest 3 sound by 'gurek' at https://freesound.org/people/gurek/sounds/433000/
         <a-sound id="forest3" src="assets/audio/forest3.wav" preload="auto"></a-sound>
-        // Fur Elise for the duck's scene- Music box version of the Fur Elise by Beethoven, from https://freesound.org/people/Jagadamba/sounds/387822/#comments:
+        // Fur Elise for the duck's scene- Music box version of the Fur Elise by Beethoven, from https://freesound.org/people/Jagadamba/sounds/387822/:
         <a-sound id="FurElise" src="assets/audio/FurElise.wav" preload="auto"></a-sound>
         //Morning sound for the flute and trumpet- royalty-free classical music - Edvard Grieg's Peer Gynt, Op. 23, 'Morning Mood' song from the opera 'In the Hall of the Mountain King':
         <a-sound id="morning" src="assets/audio/morningMood.mp3" preload="auto"></a-sound>
@@ -279,10 +279,9 @@
         sound__animationstarts="src: #teddyVoice; on: click; volume:3"></a-entity>
 
             // butterflies:
-            <!-- animation refuses to alternate -->
         <a-entity obj-model="obj: #butterflyObj; mtl: #butterflyMtl" position="10 2 13" rotation="0 -180 0" scale="0.003 0.003 0.003" 
-        animation=" property: object3D.position.x; to:-23 dir:alternate; dur: 14000; loop: true;";
-        animation__2=" property: object3D.position.y; to:5 dir:alternate; dur: 14000; loop: true;";
+        animation=" property: object3D.position.x; to:-23; dir:alternate; dur: 14000; loop: true;";
+        animation__2=" property: object3D.position.y; to:5; dir:alternate; dur: 14000; loop: true;";
         animation__3=" property: rotation; to: 0 -520 0; dur: 1000; loop: true;";
         sound__animationstart="src: #butterfliesChime; on: mouseenter; volume: 8" ></a-entity> 
 
